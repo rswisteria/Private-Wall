@@ -4,13 +4,27 @@
   </head>
   <body>
     <h1>ウォールっぽいなにか</h1>
-    <input id="post-inpput" type="text" />
-    <input id="submit-post" type="button" value="投稿" />
     <div id="wall">
+      <input id="post-input" type="text" />
+      <input id="submit-post" type="button" value="投稿" />
+      <div id="post-list">
+      </div>
     </div>
 
     <script id="post-template" type="text/html">
-      
+      <div class="post-profile">
+	<img src="<%= image_url %>" width="50" />
+      </div>
+      <div class="post-right-area">
+	<div class="name-area">
+	  <span><%= name %></span>
+	</div>
+	<div class="post-contents-area">
+	  <%= contents %>
+	</div>
+	<div class="post-comments-area">
+	</div>
+      </div>
     </script>
 
   </body>
