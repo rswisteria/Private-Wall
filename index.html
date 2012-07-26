@@ -1,6 +1,24 @@
 <html>
   <head>
     <script data-main="js/main" src="js/lib/require.js"></script>
+    <style type="text/css">
+      .clearfix:after{
+        content:".";
+        display:block;
+        height:0;
+        clear:both;
+        visibility:hidden;
+      }
+
+      .clearfix{
+        display:inline-block;
+        margin-bottom: 5px;
+        min-height:1%;  /* for IE 7*/
+      }
+
+      * html .clearfix { height: 1%; }
+      .clearfix { display: block; }      
+    </style>
   </head>
   <body>
     <h1>ウォールっぽいなにか</h1>
@@ -12,14 +30,14 @@
     </div>
 
     <script id="post-template" type="text/html">
-      <div class="post-profile">
-	<img src="<%= image_url %>" width="50" />
+      <div class="post-profile" style="float: left; margin-right: 10px;">
+	<img src="<%= image_url %>" width="40" />
       </div>
-      <div class="post-right-area">
-	<div class="name-area">
-	  <span><%= name %></span>
+      <div class="post-right-area" style="float: left;">
+	<div class="name-area" style="margin-bottom: 5px;">
+	  <span style="font-weight: bold; color: rgb(80,80,192); font-size: small;"><%= name %></span>
 	</div>
-	<div class="post-contents-area">
+	<div class="post-contents-area" style="font-size: small;">
 	  <%= contents %>
 	</div>
 	<div class="post-comments-area">

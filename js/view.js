@@ -57,6 +57,8 @@ define(["lib/jquery", "lib/underscore", "lib/backbone", "model"], function($, _,
     var PostView = Backbone.View.extend({
         tagName: 'div',
 
+        className: 'clearfix',
+
         template: _.template($("#post-template").html()),
 
         initialize: function () {
