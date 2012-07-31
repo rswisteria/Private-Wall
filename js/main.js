@@ -16,7 +16,7 @@ requirejs.config({
     }
 });
 
-require(["model", "view", "lib/jquery", "lib/jquery.mockjax"], function(model, view, $) {
+require(["view/wall", "model/wall",  "lib/jquery", "lib/jquery.mockjax"], function(WallView, Wall, $) {
     $.mockjax({
         url: "wall/",
         responseText: [
@@ -33,5 +33,5 @@ require(["model", "view", "lib/jquery", "lib/jquery.mockjax"], function(model, v
 
         ]
     });
-    window.App = new view.WallView({ model : new model.Wall } );
+    window.App = new WallView({ model : new Wall } );
 });
