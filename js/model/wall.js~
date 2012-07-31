@@ -1,8 +1,0 @@
-define(["lib/underscore", "lib/backbone"], function(_, Backbone) {
-    var Wall = Backbone.Collection.extend({
-        model : Post,
-        url: "wall/"
-    });
-
-    return Wall;
-});
